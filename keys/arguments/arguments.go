@@ -6,4 +6,5 @@ const (
 	ArgVerbose  = "verbose"
 	ArgLogDir   = "logDir"
 	ArgTLS      = "tls"
+	ArgDebug    = "debug"
 )
