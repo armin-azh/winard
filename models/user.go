@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-type User struct {
+type AbstractUser struct {
 	gorm.Model
 	prime     string `gorm:"unique"`
 	username  string `gorm:"unique"`
