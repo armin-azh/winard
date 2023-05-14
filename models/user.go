@@ -6,9 +6,9 @@ import (
 
 type AbstractUser struct {
 	AbstractModel
-	prime     string `gorm:"unique"`
-	username  string `gorm:"unique"`
-	password  string `gorm:"unique"`
-	lastLogin time.Time
-	isActive  bool
+	Prime     string `gorm:"unique"`
+	Username  string `gorm:"unique"`
+	Password  string `gorm:"unique"`
+	LastLogin time.Time
+	IsActive  bool
 }
