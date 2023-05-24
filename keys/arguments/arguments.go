@@ -7,4 +7,5 @@ const (
 	ArgLogDir   = "logDir"
 	ArgTLS      = "tls"
 	ArgDebug    = "debug"
+	ArgMedia    = "media"
 )
