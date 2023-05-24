@@ -51,6 +51,7 @@ func AuthJWTMiddleware(next http.HandlerFunc, secret []byte) http.HandlerFunc {
 		} else {
 			encoded, _ := json.Marshal(serializer.Message{Message: "You should be authorized"})
 			_, err := fmt.Fprintf(w, "%s", encoded)
+			w.WriteHeader(http.StatusUnauthorized)
 			if err != nil {
 				http.Error(w, err.Error(), http.StatusUnauthorized)
 				return
