@@ -1,5 +1,5 @@
 package _default
 
 const (
-	MaxFileSize = 20 << 600
+	MaxFileSize = 3000000
 )
