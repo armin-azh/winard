@@ -36,7 +36,7 @@ func AuthJWTMiddleware(next http.HandlerFunc, secret []byte) http.HandlerFunc {
 			exp := claims["exp"].(float64)
 			if int64(exp) < time.Now().Local().Unix() {
 				w.WriteHeader(http.StatusUnauthorized)
-				encoded, _ := json.Marshal(serializer.Message{Message: "Couldn't parse claims"})
+				encoded, _ := json.Marshal(serializer.Message{Message: "You token has been expired"})
 				_, err := fmt.Fprint(w, string(encoded))
 				if err != nil {
 					return
