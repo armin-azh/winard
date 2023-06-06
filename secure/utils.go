@@ -9,3 +9,12 @@ func ComparePassword(payload *string, password *string) (bool, error) {
 	}
 	return true, nil
 }
+
+// CipherPassword generate hash from password
+func CipherPassword(password *string, secret *[]byte) (string, error) {
+	hash, err := bcrypt.GenerateFromPassword([]byte(*password), bcrypt.DefaultCost)
+	if err != nil {
+		return "", err
+	}
+	return string(hash), nil
+}
