@@ -9,6 +9,7 @@ const (
 	EventSubjectThirdPartyUpdate       = "third-party-updated"
 	EventSubjectThirdPartyAPIKeyCreate = "third-party-api-key-created"
 	EventSubjectThirdPartyAPIKeyUPdate = "third-party-api-key-updated"
+	EventSubjectThirdPartyAPIKeyDelete = "third-party-api-key-deleted"
 	EventSubjectMessageCreated         = "message-created"
 	EventSubjectMessageUpdated         = "message-updated"
 	EventSubjectTransactionCreated     = "transaction-created"
